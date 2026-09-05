@@ -1,0 +1,47 @@
+name: 纠错与补充 / Correction
+description: 失效链接、错别字、错误分类、翻译、补充信息。Dead links, typos, miscategorization, translation, extra info.
+title: "[Fix] "
+labels: ["correction"]
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: 类型 / Type
+      options:
+        - 链接失效 / Dead link
+        - 错别字或事实错误 / Typo or factual error
+        - 分类不对 / Wrong category
+        - 补充 Prompt / Workflow / 结果 / Add prompt, workflow or results
+        - 需要翻译或补英文摘要 / Needs translation or English summary
+        - 侵权或需下架 / Infringement or removal request
+        - 其他 / Other
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: 位置 / Where
+      description: 文件路径或链接，例如 cases/02-coding/xxx.md。File path or URL.
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 说明 / What's wrong
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: 建议怎么改 / Suggested fix
+
+  - type: checkboxes
+    id: pr
+    attributes:
+      label: 提交方式 / How to submit
+      options:
+        - label: 我可以直接提 PR / I can open a PR myself
+        - label: 请帮忙改 / Please fix it

@@ -1,0 +1,86 @@
+name: 推荐案例 / Recommend a Case
+description: 推荐一个别人做的 GPT-6 案例，不用自己写全文。Recommend someone else's case — no need to write the full case.
+title: "[Recommend] "
+labels: ["recommendation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        看到好案例但不想自己写？填这 6 项就够了，剩下的我们来。
+        Saw a great case but don't want to write it up? These 6 fields are enough — we'll handle the rest.
+
+  - type: input
+    id: case-name
+    attributes:
+      label: 案例名称 / Case Name
+    validations:
+      required: true
+
+  - type: input
+    id: case-url
+    attributes:
+      label: 案例链接 / Case URL
+      description: 文章、视频、仓库、推文都可以。Article, video, repo or post.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: 分类 / Category
+      options:
+        - 01-Thinking & Research
+        - 02-Coding
+        - 03-Design
+        - 04-Writing & Content
+        - 05-Data & Office
+        - 06-Agent & Automation
+        - 07-Business
+        - 08-Startup & OPC
+        - 09-Education
+        - 10-Industry
+        - 不确定 / Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 它解决了什么问题？/ What problem does it solve?
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: 为什么值得收录？/ Why is it awesome?
+      description: 哪一点让你觉得「原来还能这么干」。What made you think "oh, you can do that?"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: reproducible
+    attributes:
+      label: 别人能复现吗？/ Can others reproduce it?
+      options:
+        - 能 / Yes
+        - 部分能 / Partly
+        - 不能，但思路有启发 / No, but the approach is inspiring
+        - 不确定 / Not sure
+    validations:
+      required: true
+
+  - type: input
+    id: author
+    attributes:
+      label: 原作者 / Original Author（可选）
+      description: 我们会保留署名。We'll keep the credit.
+
+  - type: checkboxes
+    id: license
+    attributes:
+      label: 授权 / License
+      options:
+        - label: 我确认推荐的是第三方内容，版权归原作者所有；如原作者提出异议可随时下架 / This is third-party content owned by its author and may be removed on request
+    validations:
+      required: true

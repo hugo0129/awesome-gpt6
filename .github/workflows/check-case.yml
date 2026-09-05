@@ -1,0 +1,31 @@
+name: Check Cases
+
+on:
+  pull_request:
+    paths:
+      - "cases/**"
+      - "scripts/**"
+  push:
+    branches: [main]
+    paths:
+      - "cases/**"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate case files
+        run: python3 scripts/check_cases.py
+
+      - name: Check index is up to date
+        run: |
+          python3 scripts/generate_index.py
+          if ! git diff --quiet -- cases/README.md cases/*/README.md; then
+            echo "::warning::Case index is out of date. Run: python3 scripts/generate_index.py"
+          fi

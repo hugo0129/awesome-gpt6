@@ -1,0 +1,153 @@
+name: 提交案例 / Submit a Case
+description: 提交一个你自己做过的 GPT-6 真实案例。Submit a GPT-6 case you did yourself.
+title: "[Case] "
+labels: ["case"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢你愿意把案例写下来。Thanks for writing this down.
+
+        填写前请先扫一眼 [已有案例](https://github.com/hugo0129/awesome-gpt6/tree/main/cases)，避免重复。
+        Please check [existing cases](https://github.com/hugo0129/awesome-gpt6/tree/main/cases) first to avoid duplicates.
+
+        **核心标准 / Core standard：不是"看起来很厉害"，而是"看完之后我也能用"。**
+        Not "looks impressive" — but "I can do this too after reading it".
+
+  - type: input
+    id: case-name
+    attributes:
+      label: 案例名称 / Case Name
+      description: 用「动词 + 对象 + 结果」写，例如「用 GPT-6 把 3 小时数据清洗压缩到 8 分钟」。Use "verb + object + result".
+      placeholder: 用 GPT-6 把 3 小时数据清洗压缩到 8 分钟
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: 分类 / Category
+      options:
+        - 01-Thinking & Research（研究、分析、推理）
+        - 02-Coding（开发、Vibe Coding、Debug）
+        - 03-Design（UI/UX、视觉、原型）
+        - 04-Writing & Content（文章、短视频、脚本）
+        - 05-Data & Office（Excel、报告、PPT）
+        - 06-Agent & Automation（Agent、Skills、MCP）
+        - 07-Business（市场、销售、客服、运营）
+        - 08-Startup & OPC（创业、超级个体、一人公司）
+        - 09-Education（教学、课程、学习）
+        - 10-Industry（金融、制造、文旅、政务等行业）
+    validations:
+      required: true
+
+  - type: dropdown
+    id: language
+    attributes:
+      label: 语言 / Language
+      options:
+        - 中文
+        - English
+        - 双语 / Bilingual
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 1. Problem — 原来遇到什么问题？
+      description: 越具体，别人越容易判断能不能复用。The more specific, the more reusable.
+    validations:
+      required: true
+
+  - type: textarea
+    id: before
+    attributes:
+      label: 2. Before — 过去是怎么解决的？
+      description: 原来的工作流、耗时、参与人数。Previous workflow, time spent, people involved.
+    validations:
+      required: true
+
+  - type: textarea
+    id: workflow
+    attributes:
+      label: 3. GPT-6 Workflow — GPT-6 在哪里介入？完整流程是什么？
+      description: 请分步骤写，每步写清「输入 → GPT-6 做了什么 → 人做了什么 → 输出」。这是整篇最值钱的部分。Step by step: input → what GPT-6 did → what you did → output.
+      placeholder: |
+        Step 1:
+        Step 2:
+        Step 3:
+    validations:
+      required: true
+
+  - type: textarea
+    id: prompt
+    attributes:
+      label: 4. Prompt / Context — 关键 Prompt 与上下文
+      description: 只贴真正起作用的几句即可。Only the prompts that actually mattered.
+      render: text
+
+  - type: textarea
+    id: tools
+    attributes:
+      label: 5. Tools — 用到的工具
+      placeholder: GPT-6 / Codex / GitHub / Figma / Canva / MCP / Notion / Excel / API ...
+
+  - type: textarea
+    id: result
+    attributes:
+      label: 6. Result — 最终结果
+      description: 产出了什么、交付给了谁。What was produced and delivered to whom.
+    validations:
+      required: true
+
+  - type: textarea
+    id: metrics
+    attributes:
+      label: 7. Value — 前后对比（有数据就填）
+      description: 时间、成本、质量。**没有数据就写定性对比，不要编。** Qualitative comparison is fine — don't invent numbers.
+      placeholder: |
+        | Before | After |
+        |---|---|
+        | 3 小时 | 8 分钟 |
+        | 3 人协作 | 1 人完成 |
+
+  - type: textarea
+    id: insight
+    attributes:
+      label: 8. Key Insight — 最值得学习的一点
+      description: 一条就够，写透。One point, written properly.
+
+  - type: checkboxes
+    id: reusable
+    attributes:
+      label: 9. Reusable — 别人能复现吗？
+      options:
+        - label: 能，按流程走就行 / Yes, just follow the workflow
+        - label: 部分能，需要一定领域经验 / Partly, needs domain experience
+        - label: 涉及敏感信息，已脱敏 / Contains sensitive info, already redacted
+    validations:
+      required: true
+
+  - type: input
+    id: source
+    attributes:
+      label: 原文链接 / Original Link（可选）
+      description: 如果这个案例已在别处发布过。If this case was published elsewhere.
+
+  - type: checkboxes
+    id: pr
+    attributes:
+      label: 提交方式 / How to submit
+      options:
+        - label: 我愿意自己提 PR / I can open a PR myself（推荐，见 [CONTRIBUTING.md](https://github.com/hugo0129/awesome-gpt6/blob/main/CONTRIBUTING.md)）
+        - label: 请帮忙整理成案例文件 / Please turn this into a case file for me
+
+  - type: checkboxes
+    id: license
+    attributes:
+      label: 授权 / License
+      options:
+        - label: 同意以 CC BY 4.0 发布，并授权本仓库收录展示 / I agree to publish under CC BY 4.0 and allow this repo to include it
+    validations:
+      required: true

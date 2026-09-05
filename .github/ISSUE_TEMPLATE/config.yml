@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 贡献指南 / Contributing Guide
+    url: https://github.com/hugo0129/awesome-gpt6/blob/main/CONTRIBUTING.md
+    about: 提交案例、命名规则、PR 流程都在这里。Read before submitting a case.
+  - name: 案例模板 / Case Template
+    url: https://github.com/hugo0129/awesome-gpt6/blob/main/templates/case-template.md
+    about: 直接复制这个文件开始写。Copy this file to start writing your case.
+  - name: 浏览已有案例 / Browse Cases
+    url: https://github.com/hugo0129/awesome-gpt6/tree/main/cases
+    about: 先看看有没有重复。Check whether the case already exists.
