@@ -233,6 +233,24 @@ Can others reproduce it?
 
 ---
 
+## Talk to me directly
+
+> Want to say hi, share a case that's hard to put in an Issue, or hop on a quick call?
+> Welcome to chat directly.
+
+Scan to chat about a case. I prioritize replies from people who have already opened an Issue.
+
+<p align="center">
+  <img src="assets/wechat-qr.jpg" alt="WeChat QR code" width="220" />
+  <br />
+  <sub>WeChat: scan to chat about a case</sub>
+</p>
+
+> 📌 **Open an Issue first for faster replies.** Issues trigger my email; WeChat DMs can get missed.
+> And an Issue lets the whole community see the question and answer, which helps everyone.
+
+---
+
 ## Not Limited to ChatGPT
 
 What this project studies is:

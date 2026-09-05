@@ -262,6 +262,26 @@ Can others reproduce it?
 
 ---
 
+## 直接聊 / Talk to me directly
+
+> 想交个朋友、聊一个不太好用 Issue 描述的案例、或者约个语音细聊？
+> Welcome to chat directly if your case is hard to put in an Issue.
+
+扫码加我聊案例。我会优先回提交过 Issue 的朋友。
+
+<p align="center">
+  <img src="assets/wechat-qr.jpg" alt="WeChat QR code" width="220" />
+  <br />
+  <sub>微信：扫码加我聊案例 / Scan to chat about a case</sub>
+</p>
+
+> 📌 **先提 Issue 会更高效**：我处理 Issue 才会查邮件提醒，微信消息偶尔会漏；
+> Issue 还能让别人看到问题和答案，对整个社区都有用。
+>
+> **Open an Issue first for faster replies.** Issues trigger my email; WeChat DMs can get missed.
+
+---
+
 ## 不限于 ChatGPT
 
 这个项目重点研究的是：
